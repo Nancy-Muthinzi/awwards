@@ -4,7 +4,7 @@
 {%block content%}
 {{block.super}}
 
-<div class="container-fluid">
+<div class="container-fluid" style="padding:20px;">
 
     <div class="part1" style="background-color:lightgrey;"><br>
 
@@ -15,9 +15,9 @@
 
         <h4>Welcome to Awwwards,<h4>
                 <p>A place where users can get to view my projects, rate them and vote on them on Design, Usability and
-                    Content criteria! You also get to post your projects and other users can vote on them too.</p> <br>
+                    Content criteria! You also get to post your projects and other users can vote on them too.</p>
 
-                <form class="form" role="search" action="{% url 'search_results' %}">
+                <form class="form" role="search" style="padding-left:100px; padding-right:100px;" action="{% url 'search_results' %}">
 
                     <div class="input-group">
                         <input type="text" class="form-control" placeholder="Search..." name="project">
@@ -28,7 +28,7 @@
 
                 </form>
 
-    </div>
+    </div><br>
 
     <div class="part2" style="background-color:lightgrey; padding-top:20px;"><br>
         <h2>MY PROJECTS</h2>
@@ -107,7 +107,7 @@
 
             {% endfor %}
         </div>
-    </div>
+    </div><br>
 
     <div class="part3" style="background-color:lightgrey;">
         <h2>NOMINEES</h2>
@@ -115,11 +115,12 @@
         <button type="button" class="btn">
             <a href="{%url 'new-project'%}">Submit</a>
         </button>
-    </div>
+    </div><br>
 
     <div class="part4" style="background-color:lightgrey;"><br>
         <h2>SUBSCRIBE</h2>
-        <p>To </p>
+        <p>To be a part of the AWWWARDS community, recieve updates and see which websites have been nominated, kindly
+            sign up for our weekly newsletter.</p>
         <div class="container-fluid">
             <form action="{% url 'home' %}" method="post">
                 {%csrf_token%}
@@ -128,7 +129,7 @@
                 <input type="submit" value="Subscribe">
             </form>
         </div>
-    </div>
+    </div><br>
 
     <div class="part5" style="background-color:lightgrey;">
         <h2>CONTACT INFO</h2>
@@ -142,13 +143,10 @@
             <a href="nanciekathini@gmail.com">Email: nanciekathini@gmail.com</a>
 
         </address>
-
     </div>
 </div>
 {%endblock%}
 
 {% block scripts %} {{block.super}} {% load staticfiles%}
-<script type="text/javascript" src="{%static 'js/newsletter.js'%}"></script>
-<link rel="stylesheet" href="{% static 'star-ratings/css/star-ratings.css' %}">
-<script type="text/javascript" src="{% static 'star-ratings/js/dist/star-ratings.min.js' %}"></script>
+<!-- <script type="text/javascript" src="{%static 'js/newsletter.js'%}"></script> -->
 {% endblock %}

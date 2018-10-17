@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 import datetime as dt
-from tinymce.models import HTMLField
+# from tinymce.models import HTMLField
 from django.db.models.signals import post_save
 
 class Profile(models.Model):
@@ -29,7 +29,7 @@ class Profile(models.Model):
 
 class Project(models.Model):
     title = models.CharField(max_length=25)
-    description = HTMLField()
+    description = models.TextField(max_length=500)
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     project_image = models.ImageField(upload_to='projects/', null=True)
     link = models.CharField(max_length=50, null=True)
