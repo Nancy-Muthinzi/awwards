@@ -1,0 +1,5 @@
+Hello {{name}}
+
+Welcome to the Awwwards site.
+
+You've been successfully subscribed to our mailing list, be on the lookout for the latest updates.

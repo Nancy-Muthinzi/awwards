@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body {
+      margin: 0;
+      color: lightgrey;
+    }
+
+    h1 {
+      font-size: 25px;
+      text-align: center;
+      color:
+    }
+
+    .topnav {
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    .topnav a {
+      /* float: left; */
+      color: #f2f2f2;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .topnav a.active {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    .fa {
+      padding: 20px;
+      font-size: 30px;
+      width: 50px;
+      text-align: center;
+      text-decoration: none;
+      margin: 5px 2px;
+    }
+
+    .fa:hover {
+      opacity: 0.7;
+    }
+
+    .fa-instagram,
+    .fa-twitter,
+    .fa-facebook {
+      color: lightgrey;
+    }
+
+    .social {
+      float: right;
+      padding-right: 20px;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    .navbar-form {
+      text-align: right;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- nav1 -->
+  <div class="topnav">
+
+    <div style="float:left;">
+      <!-- menu icon -->
+      <span style="font-size:30px;cursor:pointer;color:lightgrey;" onclick="openNav()">&#9776;</span>
+
+      <a class="fa fa-user-o" href="{% url 'profile' user.id %}"></a>
+    </div>
+
+    <div class="social">
+      <a href="https://www.instagram.com/awwwards/" class="fa fa-instagram"></a>
+      <a href="https://twitter.com/awwwards" class="fa fa-twitter"></a>
+      <a href="https://web.facebook.com/awwwards/?_rdc=1&_rdr" class="fa fa-facebook"></a>
+    </div>
+    <br><br><br><br>
+
+    <div style="display: flex; justify-content: flex-end">
+      <a href="/accounts/login">REGISTER/LOGIN</a>
+    </div>
+  </div>
+
+  </div>
+
+</body>
+
+</html>
